@@ -4,7 +4,7 @@
 
 Summary:	Claim areas and don't get disturbed
 Summary(pl.UTF-8):	Gra polegająca na pozyskiwaniu terenu wbrew przeciwnikom
-Name:		kde4-kbounce
+Name:		kde4-%{orgname}
 Version:	4.12.0
 Release:	1
 License:	GPL
@@ -18,7 +18,7 @@ BuildRequires:	kde4-libkdegames-devel >= %{version}
 BuildRequires:	qt4-build >= %{qtver}
 BuildRequires:	qt4-qmake >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.600
-Obsoletes:	kde4-kdegames-kbounce
+Obsoletes:	kde4-kdegames-%{orgname}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -50,7 +50,7 @@ touch $RPM_BUILD_ROOT/var/games/kbounce.scores
 # remove locolor icons
 rm -rf $RPM_BUILD_ROOT%{_iconsdir}/locolor
 
-%find_lang kbounce	--with-kde
+%find_lang %{orgname}	--with-kde
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -58,7 +58,7 @@ rm -rf $RPM_BUILD_ROOT
 %post			-p /sbin/ldconfig
 %postun			-p /sbin/ldconfig
 
-%files -f kbounce.lang
+%files -f %{orgname}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kbounce
 %{_desktopdir}/kde4/kbounce.desktop
