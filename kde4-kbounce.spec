@@ -5,12 +5,12 @@
 Summary:	Claim areas and don't get disturbed
 Summary(pl.UTF-8):	Gra polegająca na pozyskiwaniu terenu wbrew przeciwnikom
 Name:		kde4-%{orgname}
-Version:	4.13.1
+Version:	4.13.2
 Release:	1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
-# Source0-md5:	41dbe4b3d4c113fa4c452051ba39e1e2
+# Source0-md5:	a1d180538884cd70bb741b37e40fcbe8
 BuildRequires:	automoc4 >= 0.9.88
 BuildRequires:	cmake >= 2.8.0
 BuildRequires:	kde4-kdelibs-devel >= %{version}
